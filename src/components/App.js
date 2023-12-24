@@ -1,13 +1,17 @@
 
-import React from "react";
+import React,{useState} from "react";
 import './../styles/App.css';
 
-const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+import Weather from "./Weather";
 
-export default App
+const App = () => {
+  const weatherData = { temperature: 25, conditions: 'Sunny' };
+
+  return (
+    <div className="App">
+      <Weather temperature={weatherData.temperature} conditions={weatherData.conditions} />
+    </div>
+  );
+};
+
+export default App;
